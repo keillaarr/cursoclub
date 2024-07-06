@@ -1,0 +1,36 @@
+.banner {
+    transition: transform 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.zoom-transition {
+    transform: scale(1.1);
+}
+.card {
+    width: 250px; /* Largura dos cards de curso */
+    margin-right: 10px; /* Espaçamento entre os cards */
+    transition: transform 0.3s ease; /* Suaviza a transição ao passar para o próximo curso */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card ao passar o mouse */
+  }
+  .carousel-inner {
+    display: flex;
+    flex-wrap: nowrap; /* Impede que os cartões quebrem a linha */
+    overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se houver muitos cursos */
+  }
+  /* CSS Code */
+  .swiper-wrapper {
+    width: 100%;
+    height: max-content !important;
+    padding-bottom: 64px !important;
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+    position: relative;
+    }
+    .swiper-pagination-bullet {
+    background: #4f46e5;
+    }
