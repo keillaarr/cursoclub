@@ -1,47 +1,34 @@
-let images = [
-  'assets/Banner.png',
-  'assets/Banner2.png',
-  'assets/Banner3.png',
+let currentIndex = 0;
+const images = [
+    'assets/9357d3ea7e6f9cc.jpg',
+    'assets/Banner.png',
+    'assets/plugin_banners_wordpress.jpg',
 ];
 
-let currentIndex = 0;
-let bannerLink = document.getElementById('bannerLink');
-
 function nextImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  document.getElementById('banner').style.backgroundImage = `url(${images[currentIndex]})`;
-  updateBannerLink();
+    currentIndex = (currentIndex + 1) % images.length;
+    updateBanner();
 }
 
 function prevImage() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  document.getElementById('banner').style.backgroundImage = `url(${images[currentIndex]})`;
-  updateBannerLink();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateBanner();
 }
 
-function updateBannerLink() {
-  switch (currentIndex) {
-      case 0:
-          bannerLink.href = 'https://seu-link-1-aqui';
-          break;
-      case 1:
-          bannerLink.href = 'https://seu-link-2-aqui';
-          break;
-      case 2:
-          bannerLink.href = 'https://seu-link-3-aqui';
-          break;
-      default:
-          bannerLink.href = '#';
-          break;
-  }
+function updateBanner() {
+    document.getElementById('banner').style.backgroundImage = `url('${images[currentIndex]}')`;
+    document.getElementById('bannerLink').href = `https://seu-link-${currentIndex + 1}-aqui`;
+}
+
+// Mudança automática a cada 5 segundos
+setInterval(nextImage, 5000);
+
+function scrollLeft() {
+  const container = document.getElementById('scrollContainer');
+  container.appendChild(container.firstElementChild);
 }
 
 function scrollRight() {
-  let scrollContainer = document.getElementById('scrollContainer');
-  scrollContainer.scrollLeft += 200;
-}
-
-function scrollLeft() {
-  let scrollContainer = document.getElementById('scrollContainer');
-  scrollContainer.scrollLeft -= 200;
+  const container = document.getElementById('scrollContainer');
+  container.insertBefore(container.lastElementChild, container.firstElementChild);
 }

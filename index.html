@@ -29,6 +29,7 @@
             </div>
         </nav>
 
+        <!--Categoria-->
         <div class="container mx-auto py-2 bg-red-100 border-b-2 border-gray-200">
             <div class="flex justify-center">
                 <div class="flex flex-wrap justify-center space-x-4">
@@ -50,12 +51,12 @@
                 </div>
             </div>
         </div>
-
+        <!--banners-->
         <div class="relative">
-            <div id="banner"
-                class="banner bg-cover bg-center h-64 text-white transition-transform duration-500"
-                style="background-image: url('assets/Banner.png');"></div>
-            <a id="bannerLink" href="https://seu-link-1-aqui" target="_blank" rel="noopener noreferrer" class="absolute inset-0"></a>
+            <div id="banner" class="banner bg-cover bg-center h-64 text-white transition-transform duration-500"
+                style="background-image: url('assets/Banner1.png');"></div>
+            <a id="bannerLink" href="https://seu-link-1-aqui" target="_blank" rel="noopener noreferrer"
+                class="absolute inset-0"></a>
             <div class="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 cursor-pointer"
                 onclick="prevImage()">
                 <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20"
@@ -70,111 +71,185 @@
                 <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
-                        d="M7.293 14.707a1 1 000-1.414L10.586 10 7.293 6.707a1 1 011.414-1.414l4 4a1 1 010 1.414l-4 4a1 1-011.414 0z"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 00-1.414 1.414l4 4a1 1 000 1.414l-4 4a1 1 011.414 0z"
                         clip-rule="evenodd"></path>
                 </svg>
             </div>
+
         </div>
     </header>
 
-
-    <div class="container mx-auto py-8 px-7">
-        <h2 class="text-3xl font-bold mb-4 items-center justify-center">Mais Vendidos</h2>
-        <div class="relative flex items-center">
-            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10" onclick="scrollLeft()">
-                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-            </button>
-            <div id="scrollContainer" class="overflow-x-auto flex space-x-4 px-4 py-2">
-                <div class="bg-white shadow-md rounded-lg overflow-hidden flex-shrink-0 w-70">
-                    <img src="assets/curso1.jpg" alt="Curso 1"
-                        class="w-full h-48 object-cover object-center">
-                    <div class="p-4">
-                        <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 1</h3>
-                        <p class="text-gray-600 text-sm">Descrição breve do curso 1.</p>
-                        <div class="flex justify-between items-center mt-2">
-                            <p class="text-blue-gray-900 font-medium">$95.00</p>
-                            <button
-                                class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
-                                Compre Aqui
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white shadow-md rounded-lg overflow-hidden flex-shrink-0 w-72">
-                    <img src="assets/carreira-e-desenvolvimento-pessoal.jpg" alt="Curso 2"
-                        class="w-full h-48 object-cover object-center">
-                    <div class="p-4">
-                        <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 2</h3>
-                        <p class="text-gray-600 text-sm">Descrição breve do curso 2.</p>
-                        <div class="flex justify-between items-center mt-2">
-                            <p class="text-blue-gray-900 font-medium">$85.00</p>
-                            <button
-                                class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
-                                Compre Aqui
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white shadow-md rounded-lg overflow-hidden flex-shrink-0 w-72">
-                    <img src="assets/curso-1.png" alt="Curso 3"
-                        class="w-full h-48 object-cover object-center">
-                    <div class="p-4">
-                        <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 3</h3>
-                        <p class="text-gray-600 text-sm">Descrição breve do curso 3.</p>
-                        <div class="flex justify-between items-center mt-2">
-                            <p class="text-blue-gray-900 font-medium">$155.00</p>
-                            <button
-                                class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
-                                Compre Aqui
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white shadow-md rounded-lg overflow-hidden flex-shrink-0 w-72">
-                    <img src="assets/financas-e-negocios.jpg" alt="Curso 4"
-                        class="w-full h-48 object-cover object-center">
-                    <div class="p-4">
-                        <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 4</h3>
-                        <p class="text-gray-600 text-sm">Descrição breve do curso 4.</p>
-                        <div class="flex justify-between items-center mt-2">
-                            <p class="text-blue-gray-900 font-medium">$125.00</p>
-                            <button
-                                class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
-                                Compre Aqui
-                            </button>
-                        </div>
+<!-- Mais Vendidos -->
+<div class="container mx-auto py-8 px-7">
+    <h2 class="text-3xl font-bold mb-4 items-center justify-center">Mais Vendidos</h2>
+    <div class="relative flex items-center overflow-hidden">
+        <div class="scroll-container" id="scrollContainer">
+            <div class="scroll-item bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="assets/curso1.jpg" alt="Curso 1" class="w-full h-48 object-cover object-center">
+                <div class="p-4">
+                    <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 1</h3>
+                    <p class="text-gray-600 text-sm">Descrição breve do curso 1.</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <p class="text-blue-gray-900 font-medium">$95.00</p>
+                        <button class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
+                            Compre Aqui
+                        </button>
                     </div>
                 </div>
             </div>
-            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10" onclick="scrollRight()">
-                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-            </button>
-        </div>
 
+            <div class="scroll-item bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="assets/carreira-e-desenvolvimento-pessoal.jpg" alt="Curso 2" class="w-full h-48 object-cover object-center">
+                <div class="p-4">
+                    <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 2</h3>
+                    <p class="text-gray-600 text-sm">Descrição breve do curso 2.</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <p class="text-blue-gray-900 font-medium">$85.00</p>
+                        <button class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
+                            Compre Aqui
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-item bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="assets/curso-1.png" alt="Curso 3" class="w-full h-48 object-cover object-center">
+                <div class="p-4">
+                    <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 3</h3>
+                    <p class="text-gray-600 text-sm">Descrição breve do curso 3.</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <p class="text-blue-gray-900 font-medium">$155.00</p>
+                        <button class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
+                            Compre Aqui
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-item bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="assets/carreira-e-desenvolvimento-pessoal.jpg" alt="Curso 4" class="w-full h-48 object-cover object-center">
+                <div class="p-4">
+                    <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 4</h3>
+                    <p class="text-gray-600 text-sm">Descrição breve do curso 4.</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <p class="text-blue-gray-900 font-medium">$125.00</p>
+                        <button class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
+                            Compre Aqui
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-item bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="assets/carreira-e-desenvolvimento-pessoal.jpg" alt="Curso 4" class="w-full h-48 object-cover object-center">
+                <div class="p-4">
+                    <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 4</h3>
+                    <p class="text-gray-600 text-sm">Descrição breve do curso 4.</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <p class="text-blue-gray-900 font-medium">$125.00</p>
+                        <button class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
+                            Compre Aqui
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-item bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="assets/carreira-e-desenvolvimento-pessoal.jpg" alt="Curso 4" class="w-full h-48 object-cover object-center">
+                <div class="p-4">
+                    <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 4</h3>
+                    <p class="text-gray-600 text-sm">Descrição breve do curso 4.</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <p class="text-blue-gray-900 font-medium">$125.00</p>
+                        <button class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
+                            Compre Aqui
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="scroll-item bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="assets/carreira-e-desenvolvimento-pessoal.jpg" alt="Curso 4" class="w-full h-48 object-cover object-center">
+                <div class="p-4">
+                    <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 4</h3>
+                    <p class="text-gray-600 text-sm">Descrição breve do curso 4.</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <p class="text-blue-gray-900 font-medium">$125.00</p>
+                        <button class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
+                            Compre Aqui
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-item bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="assets/carreira-e-desenvolvimento-pessoal.jpg" alt="Curso 4" class="w-full h-48 object-cover object-center">
+                <div class="p-4">
+                    <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 4</h3>
+                    <p class="text-gray-600 text-sm">Descrição breve do curso 4.</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <p class="text-blue-gray-900 font-medium">$125.00</p>
+                        <button class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
+                            Compre Aqui
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-item bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="assets/carreira-e-desenvolvimento-pessoal.jpg" alt="Curso 4" class="w-full h-48 object-cover object-center">
+                <div class="p-4">
+                    <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 4</h3>
+                    <p class="text-gray-600 text-sm">Descrição breve do curso 4.</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <p class="text-blue-gray-900 font-medium">$125.00</p>
+                        <button class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
+                            Compre Aqui
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-item bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="assets/carreira-e-desenvolvimento-pessoal.jpg" alt="Curso 4" class="w-full h-48 object-cover object-center">
+                <div class="p-4">
+                    <h3 class="text-gray-900 font-bold text-lg mb-2">Título do Curso 4</h3>
+                    <p class="text-gray-600 text-sm">Descrição breve do curso 4.</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <p class="text-blue-gray-900 font-medium">$125.00</p>
+                        <button class="bg-red-500 text-blue-gray-900 hover:bg-blue-gray-900/20 py-2 px-4 rounded-lg font-semibold transition duration-300">
+                            Compre Aqui
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10" onclick="scrollRight()">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
     </div>
+</div>
 
-    <footer class="bg-gray-800 text-white py-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div>
-                <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
-            </div>
-            <div>
-                <a href="#" class="text-white hover:text-red-500 px-3">Facebook</a>
-                <a href="#" class="text-white hover:text-red-500 px-3">Instagram</a>
-                <a href="#" class="text-white hover:text-red-500 px-3">LinkedIn</a>
-                <a href="#" class="text-white hover:text-red-500 px-3">Twitter</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="scripts/script.js"></script>
+    <script src="script.js"></script>
 </body>
+<!--Rodapé-->
+<footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <div>
+            <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
+        </div>
+        <div>
+            <a href="#" class="text-white hover:text-red-500 px-3">Facebook</a>
+            <a href="#" class="text-white hover:text-red-500 px-3">Instagram</a>
+            <a href="#" class="text-white hover:text-red-500 px-3">LinkedIn</a>
+            <a href="#" class="text-white hover:text-red-500 px-3">Twitter</a>
+        </div>
+    </div>
+</footer>
 
 </html>
