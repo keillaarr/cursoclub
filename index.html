@@ -7,110 +7,142 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Seu Site</title>
+    <title>Curso.Club</title>
     <style>
-        /* Estilo adicional */
-        .spacer-bottom {
-            margin-bottom: 120px; /* Ajuste o valor conforme necessário */
-        }
+      
     </style>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-white">
 
-    <header>
-        <nav class="bg-white p-2 border-b-2 border-gray-200">
-            <div class="container mx-auto flex justify-between items-center">
-                <div class="w-40 h-20 overflow-hidden hover:scale-105 duration-200">
-                    <img src="assets/logo.jpeg" alt="Logo"
-                        class="w-full h-full object-cover transition-transform duration-200 hover:scale-110">
-                </div>
-                <div>
-                    <a href="#"
-                        class="inline-block text-black px-5 font-bold transition-transform duration-350 hover:scale-110 hover:text-red-500">Home</a>
-                    <a href="#"
-                        class="inline-block text-black px-5 font-bold transition-transform duration-350 hover:scale-110 hover:text-red-500">Sobre</a>
-                    <a href="#"
-                        class="inline-block text-black px-5 font-bold transition-transform duration-350 hover:scale-110 hover:text-red-500">Contato</a>
+    <!-- Navegação -->
+    <nav class="bg-white p-4 md:p-8 z-50 nav-container ">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-8">
+                <div class="w-32 h-24 overflow-hidden hover:scale-100 duration-200">
+                    <img src="assets/logo.jpeg" alt="Logo" class="w-full h-full object-cover transition-transform duration-200 hover:scale-110">
                 </div>
             </div>
-        </nav>
+            <div class="flex items-center space-x-8">
+                <a href="#mais-vendidos" class="text-black px-3 md:px-4 font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Mais Vendidos</a>
+                <a href="#desconto" class="text-black px-3 md:px-4 font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Cursos com Desconto</a>
+            </div>
+        </div>
+    </nav>
+    
+    
+    
+    
 
-        <!--Categoria-->
-        <div class="container mx-auto py-2 bg-red-100 border-b-2 border-gray-200">
+    <!-- Categoria -->
+    <div class="bg-black">
+        <div class="container mx-auto border-b-2 border-gray-200 mt-16 category-section">
             <div class="flex justify-center">
-                <div class="flex flex-wrap justify-center space-x-4">
-                    <a href="#"
-                        class="text-red-500 font-bold hover:text-black py-2 px-4 md:px-6 lg:px-8">Finanças e
-                        Negócios</a>
-                    <a href="#"
-                        class="text-red-500 font-bold hover:text-black py-2 px-4 md:px-6 lg:px-8">Ensino e
-                        Estudo Acadêmico</a>
-                    <a href="#"
-                        class="text-red-500 font-bold hover:text-black py-2 px-4 md:px-6 lg:px-8">Carreira e
-                        Desenvolvimento Pessoal</a>
-                    <a href="#"
-                        class="text-red-500 font-bold hover:text-black py-2 px-4 md:px-6 lg:px-8">Saúde e
-                        Esportes</a>
-                    <a href="#"
-                        class="text-red-500 font-bold hover:text-black py-2 px-4 md:px-6 lg:px-8">Marketing
-                        e Vendas</a>
+                <div class="flex flex-wrap justify-center space-x-2">
+                    <a href="#" class="text-red-500 font-bold hover:text-white py-1 px-2 md:px-4 lg:px-6">Finanças e Negócios</a>
+                    <a href="#" class="text-red-500 font-bold hover:text-white py-1 px-2 md:px-4 lg:px-6">Ensino e Estudo Acadêmico</a>
+                    <a href="#" class="text-red-500 font-bold hover:text-white py-1 px-2 md:px-4 lg:px-6">Carreira e Desenvolvimento Pessoal</a>
+                    <a href="#" class="text-red-500 font-bold hover:text-white py-1 px-2 md:px-4 lg:px-6">Saúde e Esportes</a>
+                    <a href="#" class="text-red-500 font-bold hover:text-white py-1 px-2 md:px-4 lg:px-6">Marketing e Vendas</a>
                 </div>
             </div>
         </div>
-        <!--banners-->
-        <div class="relative">
-            <div id="banner" class="banner bg-cover bg-center h-64 text-white transition-transform duration-500"
-                style="background-image: url('assets/banner-texto.jpg');"></div>
-            <a id="bannerLink" href="https://seu-link-1-aqui" target="_blank" rel="noopener noreferrer"
-                class="absolute inset-0"></a>
-            <div class="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 cursor-pointer banner-left-button">
-                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M12.707 14.707a1 1 0 010-1.414L9.414 10l3.293-3.293a1 1 00-1.414-1.414l-4 4a1 1 000 1.414l4 4a1 1 001.414 0z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </div>
-            <div class="absolute top-1/2 right-0 transform -translate-y-1/2 px-4 cursor-pointer banner-right-button">
-                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 00-1.414 1.414l4 4a1 1 000 1.414l-4 4a1 1 011.414 0z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </div>
+    </div>
+    
+    
+    <!-- Banners -->
+    <div class="relative">
+        <div id="banner" class="banner bg-cover bg-center h-60 text-white transition-transform duration-500"
+            style="background-image: url('assets/banner-texto.jpg'); height: 60vh;"></div>
+        <a id="bannerLink" href="https://seu-link-1-aqui" target="_blank" rel="noopener noreferrer"
+            class="absolute inset-0"></a>
+        <div class="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 cursor-pointer banner-left-button">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M12.707 14.707a1 1 0 010-1.414L9.414 10l3.293-3.293a1 1 00-1.414-1.414l-4 4a1 1 000 1.414l4 4a1 1 001.414 0z"
+                    clip-rule="evenodd"></path>
+            </svg>
         </div>
-    </header>
+        <div class="absolute top-1/2 right-0 transform -translate-y-1/2 px-4 cursor-pointer banner-right-button">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 00-1.414 1.414l4 4a1 1 011.414 0z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </div>
+    </div>
+
     <!-- Mais Vendidos -->
-    <div class="container mx-auto py-8 px-7 spacer-bottom">
+    <div id="mais-vendidos"
+        class="container mx-auto py-4 px-4 mt-16 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-70">
         <h2 class="text-3xl font-bold mb-4 text-center">Mais Vendidos</h2>
         <div class="relative flex items-center overflow-hidden">
             <!-- Botão esquerdo -->
-            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-left-button">
-                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-left-button">
+                <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 19l-7-7 7-7"></path>
                 </svg>
             </button>
 
-            <!-- Conteúdo do carrossel aqui -->
-            <div class="scroll-container flex space-x-4 overflow-x-scroll" id="scrollContainer">
+            <!-- Conteúdo do carrossel -->
+            <div class="scroll-container flex space-x-2" id="scrollContainer"
+                style="height: auto; min-height: 400px;">
                 <!-- Aqui serão adicionados os cards dinamicamente via JavaScript -->
             </div>
 
             <!-- Botão direito -->
-            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-right-button">
-                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-right-button">
+                <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 5l7 7-7 7"></path>
                 </svg>
             </button>
         </div>
     </div>
-    <!--Rodapé-->
-   
 
+    <!-- Cursos com Desconto -->
+    <div id="desconto"
+        class="container mx-auto py-4 px-4 mt-16 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-70"
+        style="margin-top: -10px; padding-bottom: 50px;">
+        <h2 class="text-3xl font-bold mb-4 text-center">Descontos</h2>
+        <div class="relative flex items-center overflow-hidden">
+            <!-- Botão esquerdo -->
+            <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-left-button3">
+                <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+
+            <!-- Conteúdo do carrossel aqui -->
+            <div class="scroll-container flex space-x-2" id="scrollContainer3"
+                style="height: auto; min-height: 400px;">
+                <!-- Aqui serão adicionados os cards dinamicamente via JavaScript -->
+            </div>
+
+            <!-- Botão direito -->
+            <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-right-button3">
+                <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-4">
+        <!-- Conteúdo do rodapé -->
+    </footer>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 

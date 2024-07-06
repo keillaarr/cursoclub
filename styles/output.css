@@ -1,41 +1,58 @@
+.nav-container {
+  height: 60px;
+  /* Altura da navegação */
+}
+
+/* Estilo para remover margem inferior da categoria */
+
+.category-section {
+  margin-bottom: -1px;
+  /* Remover a margem inferior */
+}
+
 .scroll-container {
   display: flex;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  margin-bottom: -20px;
-  /* Compensa a margem interna do scroll */
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .scroll-container::-webkit-scrollbar {
   display: none;
-  /* Esconde a barra de rolagem do WebKit (Safari e Chrome) */
+  /* Safari and Chrome */
 }
 
-.scroll-item {
+.scroll-container .card {
   flex: 0 0 auto;
-  width: 20rem;
-  /* Largura dos itens do carrossel */
-  margin-right: 1rem;
-  /* Espaçamento entre os itens */
-  transition: margin 0.5s;
+  scroll-snap-align: start;
 }
 
-.scroll-item:last-child {
-  margin-right: 0;
+/* Ajuste para os botões dos carrosséis */
+
+.carousel-left-button,
+.carousel-right-button,
+.carousel-left-button3,
+.carousel-right-button3 {
+  top: calc(50% + 60px);
+  /* Ajuste conforme necessário */
 }
 
-button {
-  background: white;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.carousel-left-button,
+.carousel-left-button3 {
+  left: 10px;
+  /* Ajuste conforme necessário */
 }
 
-button svg {
-  width: 24px;
-  height: 24px;
-  stroke: #555;
+.carousel-right-button,
+.carousel-right-button3 {
+  right: 10px;
+  /* Ajuste conforme necessário */
+}
+
+.spacer-bottom {
+  margin-bottom: 60px;
+  /* Reduzido o valor conforme necessário */
 }
