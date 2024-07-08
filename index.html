@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="logo.jpeg">
     <title>Curso.Club</title>
       <!--META TAG OG-->
       <meta property="og:type" content="website">
@@ -33,21 +33,35 @@
         </div>
     </nav>
 
-    <!-- Categoria -->
-    <div class="bg-black">
-        <div class="container mx-auto border-b-2 border-gray-200 mt-16 category-section">
-            <div class="flex justify-center">
-                <div class="flex flex-wrap justify-center space-x-2">
-                    <a href="#" class="text-red-500 font-bold hover:text-white py-1 px-2 md:px-4 lg:px-6">Finanças e Negócios</a>
-                    <a href="#" class="text-red-500 font-bold hover:text-white py-1 px-2 md:px-4 lg:px-6">Ensino e Estudo Acadêmico</a>
-                    <a href="#" class="text-red-500 font-bold hover:text-white py-1 px-2 md:px-4 lg:px-6">Carreira e Desenvolvimento Pessoal</a>
-                    <a href="#" class="text-red-500 font-bold hover:text-white py-1 px-2 md:px-4 lg:px-6">Saúde e Esportes</a>
-                    <a href="#" class="text-red-500 font-bold hover:text-white py-1 px-2 md:px-4 lg:px-6">Marketing e Vendas</a>
+        <!-- Categoria -->
+
+        <div class=" my-10 mx-12 "> <!-- Adicionado py-8 para espaçamento nas bordas superior e inferior -->
+            <div class="container mx-auto category-section"> <!-- Removida a classe border-b-2 border-gray-200 -->
+                <div class="flex justify-center">
+                    <div class="flex flex-wrap justify-center space-x-4"> <!-- Ajustado para space-x-8 para maior espaçamento horizontal -->
+                        <a href="#" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300"> Marketing Digital </a>
+                        <a href="#" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300"> Ensino e Estudo Acadêmico </a>
+                        <a href="#" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300"> Empreendedorismo </a>
+                        <a href="#" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300"> Maquiagem </a>
+                        <a href="#" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300"> Investimento </a>
+                        <a href="#" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300"> Saúde e Esportes </a>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
+        <div class="bg-white my-5 mx-12 ">
+            <div class="container mx-auto category-section"> 
+                <div class="flex justify-center">
+                    <div class="flex flex-wrap justify-center space-x-4"> 
+                        <a href="#" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300"> Culinária e Gastronomia </a>
+                        <a href="#" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300"> Idioma </a>
+                        <a href="#" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300"> Concursos </a>
+                        <a href="#" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300"> Estética </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     <!-- Banners -->
     <div class="relative">
         <div id="banner" class="banner bg-cover bg-center h-60 md:h-96 text-white transition-transform duration-500"
@@ -72,68 +86,115 @@
         </div>
     </div>
 
-    <!-- Mais Vendidos -->
-    <div id="mais-vendidos"
-        class="container mx-auto py-4 px-4 mt-16 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-70">
-        <h2 class="text-3xl font-bold mb-4 text-center">Mais Vendidos</h2>
-        <div class="relative flex items-center overflow-hidden">
-            <!-- Botão esquerdo -->
-            <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-left-button">
-                <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M15 19l-7-7 7-7"></path>
-                </svg>
-            </button>
+                
+        <!-- Mais Vendidos -->
+        <div id="mais-vendidos" class="container mx-auto py-4 px-4 mt-16 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-70">
+            <h2 class="text-3xl font-bold mb-4 text-center">Mais Vendidos</h2>
+            <div class="relative flex items-center overflow-hidden">
+                <!-- Botão esquerdo -->
+                <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-left-button">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
 
-            <!-- Conteúdo do carrossel -->
-            <div class="scroll-container flex space-x-2" id="scrollContainer"
-                style="height: auto; min-height: 400px;">
-                <!-- Aqui serão adicionados os cards dinamicamente via JavaScript -->
+                <!-- Conteúdo do carrossel -->
+                <div class="scroll-container flex space-x-2" id="scrollContainer" style="height: auto; min-height: 400px;">
+                    <!-- Aqui serão adicionados os cards dinamicamente via JavaScript -->
+                </div>
+
+                <!-- Botão direito -->
+                <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-right-button">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
             </div>
-
-            <!-- Botão direito -->
-            <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-right-button">
-                <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M9 5l7 7-7 7"></path>
-                </svg>
-            </button>
         </div>
-    </div>
-
-    <!-- Cursos com Desconto -->
-    <div id="desconto"
-        class="container mx-auto py-4 px-4 mt-16 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-70"
-        style="margin-top: -10px; padding-bottom: 50px;">
-        <h2 class="text-3xl font-bold mb-4 text-center">Descontos</h2>
-        <div class="relative flex items-center overflow-hidden">
-            <!-- Botão esquerdo -->
-            <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-left-button3">
-                <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M15 19l-7-7 7-7"></path>
-                </svg>
-            </button>
-
-            <!-- Conteúdo do carrossel aqui -->
-            <div class="scroll-container flex space-x-2" id="scrollContainer3"
-                style="height: auto; min-height: 400px;">
-                <!-- Aqui serão adicionados os cards dinamicamente via JavaScript -->
+            <!-- Cursos com Desconto -->
+        <div id="desconto" class="container mx-auto py-4 px-4 mt-16 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-70" style="margin-top: -10px; padding-bottom: 50px;">
+            <h2 class="text-3xl font-bold mb-4 text-center">Descontos</h2>
+            <div class="relative flex items-center overflow-hidden">
+                <!-- Botão esquerdo -->
+                <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-left-button3">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <!-- Conteúdo do carrossel -->
+                <div class="scroll-container flex space-x-2 overflow-x-scroll no-scrollbar" id="scrollContainer3" style="height: auto; min-height: 400px;">
+                    <!-- Aqui serão adicionados os cards dinamicamente via JavaScript -->
+                </div>
+                <!-- Botão direito -->
+                <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-right-button3">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
             </div>
-
-            <!-- Botão direito -->
-            <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-right-button3">
-                <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M9 5l7 7-7 7"></path>
-                </svg>
-            </button>
         </div>
-    </div>
+
+            <!-- Novos Cursos -->
+        <div id="novos-cursos" class="container mx-auto py-4 px-4 mt-16 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-70" style="margin-top: -10px; padding-bottom: 50px;">
+            <h2 class="text-3xl font-bold mb-4 text-center">Novos Cursos</h2>
+            <div class="relative flex items-center overflow-hidden">
+                <!-- Botão esquerdo -->
+                <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-left-button4">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <!-- Conteúdo do carrossel -->
+                <div class="scroll-container flex space-x-2 overflow-x-scroll no-scrollbar" id="scrollContainer4" style="height: auto; min-height: 400px;">
+                    <!-- Aqui serão adicionados os cards dinamicamente via JavaScript -->
+                </div>
+                <!-- Botão direito -->
+                <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-right-button4">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+                <!-- Exemplo -->
+        <div id="exemplo" class="container mx-auto py-4 px-4 mt-16 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-70" style="margin-top: -10px; padding-bottom: 50px;">
+            <h2 class="text-3xl font-bold mb-4 text-center">Exemplo</h2>
+            <div class="relative flex items-center overflow-hidden">
+                <!-- Botão esquerdo -->
+                <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-left-button5">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <!-- Conteúdo do carrossel -->
+                <div class="scroll-container flex space-x-2 overflow-x-scroll no-scrollbar" id="scrollContainer5" style="height: auto; min-height: 400px;">
+                    <!-- Aqui serão adicionados os cards dinamicamente via JavaScript -->
+                </div>
+                <!-- Botão direito -->
+                <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-right-button5">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <p class="text-center md:text-left">&copy; 2024 Seu Site. Todos os direitos reservados.</p>
+            </div>
+            <div>
+                <a href="#"
+                    class="inline-block text-white px-3 font-bold transition-transform duration-350 hover:scale-110">Facebook</a>
+                <a href="#"
+                    class="inline-block text-white px-3 font-bold transition-transform duration-350 hover:scale-110">Instagram</a>
+                <a href="#"
+                    class="inline-block text-white px-3 font-bold transition-transform duration-350 hover:scale-110">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="script.js"></script>
