@@ -43,3 +43,16 @@
 .spacer-bottom {
   margin-bottom: 60px; /* Reduzido o valor conforme necessário */
 }
+.category-link::before {
+  content: "|";
+  color: rgba(254, 254, 254, 0.959);
+  margin-right: 0.5rem;
+}
+
+.category-link:first-child::before {
+  content: "";
+}
+
+.category-link:hover {
+  color: rgb(241, 190, 180); /* Fix the hover color to be the same as the default color */
+}
