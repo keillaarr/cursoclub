@@ -39,56 +39,65 @@ const maisVendidos = [
       titulo: 'Título do Curso 1',
       descricao: 'Descrição breve do curso 1.',
       preco: '$95.00',
-      link: 'https://seu-link-curso1-aqui'
+      link: 'https://seu-link-curso1-aqui',
+      detalhesLink: 'https://seu-link-detalhes-aqui'
+
   },
   {
       imagem: 'assets/carreira-e-desenvolvimento-pessoal.jpg',
       titulo: 'Título do Curso 2',
       descricao: 'Descrição breve do curso 2.',
       preco: '$85.00',
-      link: 'https://seu-link-curso2-aqui'
+      link: 'https://seu-link-curso2-aqui',
+      detalhesLink: 'https://seu-link-detalhes-aqui'
   },
   {
     imagem: 'assets/curso-1.png',
     titulo: 'Título do Curso 3',
     descricao: 'Descrição breve do curso 3.',
     preco: '$20.00',
-    link: 'https://seu-link-curso3-aqui'
+    link: 'https://seu-link-curso3-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
   },
   {
     imagem: 'assets/financas-e-negocios.jpeg',
     titulo: 'Título do Curso 4',
     descricao: 'Descrição breve do curso 4.',
     preco: '$100.00',
-    link: 'https://seu-link-curso4-aqui'
+    link: 'https://seu-link-curso4-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
   },
   {
     imagem: 'assets/curso1.jpg',
     titulo: 'Título do Curso 5',
     descricao: 'Descrição breve do curso 5.',
     preco: '$80.00',
-    link: 'https://seu-link-curso5-aqui'
+    link: 'https://seu-link-curso5-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
   },
   {
     imagem: 'assets/curso1.jpg',
     titulo: 'Título do Curso 5',
     descricao: 'Descrição breve do curso 5.',
     preco: '$80.00',
-    link: 'https://seu-link-curso5-aqui'
+    link: 'https://seu-link-curso5-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
   },
   {
     imagem: 'assets/curso1.jpg',
     titulo: 'Título do Curso 5',
     descricao: 'Descrição breve do curso 5.',
     preco: '$80.00',
-    link: 'https://seu-link-curso5-aqui'
+    link: 'https://seu-link-curso5-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
   },
   {
     imagem: 'assets/curso1.jpg',
     titulo: 'Título do Curso 5',
     descricao: 'Descrição breve do curso 5.',
     preco: '$80.00',
-    link: 'https://seu-link-curso5-aqui'
+    link: 'https://seu-link-curso5-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
   },
 
  
@@ -105,21 +114,25 @@ function adicionarCardsMaisVendidos() {
       card.style.width = '18rem'; // Define a largura fixa do card
 
       card.innerHTML = `
-          <figure class="px-6 pt-6">
-              <img src="${curso.imagem}" alt="${curso.titulo}" class="rounded-xl h-40 w-full object-cover">
-          </figure>
-          <div class="card-body items-center text-center p-3">
-              <div class="flex justify-between w-full">
-                  <h2 class="card-title text-lg font-bold">${curso.titulo}</h2>
-                  <p class="text-blue-gray-900 font-medium">${curso.preco}</p>
-              </div>
-              <div><p class="text-blue-gray-900 font-medium">${curso.descricao} </div>
-              <div class="card-actions mt-2 w-full flex justify-center">
-                    <a href="${curso.link}" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300">
-                      Compre Aqui
-                  </a>
-              </div>
-          </div>
+      <figure class="px-6 pt-6">
+      <img src="${curso.imagem}" alt="${curso.titulo}" class="rounded-xl h-40 w-full object-cover">
+  </figure>
+  <div class="card-body items-center text-center p-3">
+      <div class="flex justify-between w-full">
+          <h2 class="card-title text-lg font-bold">${curso.titulo}</h2>
+          <p class="text-blue-gray-900 font-medium">${curso.preco}</p>
+      </div>
+      <div>
+          <p class="text-blue-gray-900 font-medium">${curso.descricao}</p>
+      </div>
+      <div class="card-actions mt-2 w-full flex flex-col items-center"> <!-- Flex container ajustado para empilhar itens verticalmente -->
+          <a href="${curso.link}" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300">
+              Compre Aqui
+          </a>
+          <a href="${curso.detalhesLink}" target="_blank" class="text-black hover:text-red-500 mt-2 font-semibold transition duration-300"> <!-- Link de Detalhes adicionado -->
+              Detalhes (+)
+          </a>
+      </div>
       `;
       container.appendChild(card);
   });
@@ -156,57 +169,74 @@ const cursosComDesconto = [
     imagem: 'assets/curso1.jpg',
     titulo: 'Título do Curso 1',
     descricao: 'Descrição breve do curso 1.',
+    precoAnterior: '$120.00',
     preco: '$95.00',
-    link: 'https://seu-link-curso1-aqui'
+    link: 'https://seu-link-curso1-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
+
 },
 {
     imagem: 'assets/carreira-e-desenvolvimento-pessoal.jpg',
     titulo: 'Título do Curso 2',
     descricao: 'Descrição breve do curso 2.',
+    precoAnterior: '$120.00',
     preco: '$85.00',
-    link: 'https://seu-link-curso2-aqui'
+    link: 'https://seu-link-curso2-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
 },
 {
   imagem: 'assets/curso-1.png',
   titulo: 'Título do Curso 3',
   descricao: 'Descrição breve do curso 3.',
+  precoAnterior: '$120.00',
   preco: '$20.00',
-  link: 'https://seu-link-curso3-aqui'
+  link: 'https://seu-link-curso3-aqui',
+  detalhesLink: 'https://seu-link-detalhes-aqui'
 },
 {
   imagem: 'assets/financas-e-negocios.jpeg',
   titulo: 'Título do Curso 4',
   descricao: 'Descrição breve do curso 4.',
+  precoAnterior: '$120.00',
   preco: '$100.00',
-  link: 'https://seu-link-curso4-aqui'
+  link: 'https://seu-link-curso4-aqui',
+  detalhesLink: 'https://seu-link-detalhes-aqui'
 },
 {
   imagem: 'assets/curso1.jpg',
   titulo: 'Título do Curso 5',
   descricao: 'Descrição breve do curso 5.',
+  precoAnterior: '$120.00',
   preco: '$80.00',
-  link: 'https://seu-link-curso5-aqui'
+  link: 'https://seu-link-curso5-aqui',
+  detalhesLink: 'https://seu-link-detalhes-aqui'
 },
 {
   imagem: 'assets/curso1.jpg',
   titulo: 'Título do Curso 5',
   descricao: 'Descrição breve do curso 5.',
+  precoAnterior: '$120.00',
   preco: '$80.00',
-  link: 'https://seu-link-curso5-aqui'
+  link: 'https://seu-link-curso5-aqui',
+  detalhesLink: 'https://seu-link-detalhes-aqui'
 },
 {
   imagem: 'assets/curso1.jpg',
   titulo: 'Título do Curso 5',
   descricao: 'Descrição breve do curso 5.',
+  precoAnterior: '$120.00',
   preco: '$80.00',
-  link: 'https://seu-link-curso5-aqui'
+  link: 'https://seu-link-curso5-aqui',
+  detalhesLink: 'https://seu-link-detalhes-aqui'
 },
 {
   imagem: 'assets/curso1.jpg',
   titulo: 'Título do Curso 5',
   descricao: 'Descrição breve do curso 5.',
+  precoAnterior: '$120.00',
   preco: '$80.00',
-  link: 'https://seu-link-curso5-aqui'
+  link: 'https://seu-link-curso5-aqui',
+  detalhesLink: 'https://seu-link-detalhes-aqui'
 },
 // Adicione mais objetos conforme necessário
 ];
@@ -219,21 +249,32 @@ function adicionarCardsCursosComDesconto() {
       const card = document.createElement('div');
       card.classList.add('card', 'bg-base-100', 'shadow-xl', 'mx-2');
       card.innerHTML = `
-          <figure class="px-6 pt-6">
-              <img src="${curso.imagem}" alt="${curso.titulo}" class="rounded-xl h-40 w-full object-cover">
-          </figure>
-          <div class="card-body items-center text-center p-3">
-              <div class="flex justify-between w-full">
-                  <h2 class="card-title text-lg font-bold">${curso.titulo}</h2>
-                  <p class="text-blue-gray-900 font-medium">${curso.preco}</p>
-              </div>
-              <div><p class="text-blue-gray-900 font-medium">${curso.descricao}</p></div>
-              <div class="card-actions mt-2 w-full flex justify-center">
-                  <a href="${curso.link}" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300">
-                      Compre Aqui
-                  </a>
-              </div>
+      <figure class="px-6 pt-6">
+        <img src="${curso.imagem}" alt="${curso.titulo}" class="rounded-xl h-40 w-full object-cover">
+      </figure>
+      <div class="card-body items-center text-center p-3">
+        <h2 class="card-title text-lg font-bold">${curso.titulo}</h2>
+        <div class="flex flex-col items-center">
+            <p class="text-blue-gray-900 font-medium line-through italic">De ${curso.precoAnterior}</p>
+            <p class="text-blue-gray-900 font-medium italic">Por ${curso.preco}</p>
           </div>
+          
+        <div class="mt-2">
+          <p class="text-blue-gray-900 font-medium">${curso.descricao}</p>
+        </div>
+        <div class="card-actions mt-4 w-full flex flex-col items-center">
+          <div class="w-full flex justify-center">
+            <a href="${curso.link}" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300">
+              Compre Aqui
+            </a>
+          </div>
+          <div class="w-full flex justify-center mt-2">
+            <a href="${curso.detalhesLink}" target="_blank" class="text-black hover:text-red-500 font-semibold transition duration-300">
+              Detalhes (+)
+            </a>
+          </div>
+        </div>
+      </div>
       `;
       container.appendChild(card);
   });
@@ -282,57 +323,66 @@ const novosCursos = [
     titulo: 'Título do Curso 1',
     descricao: 'Descrição breve do curso 1.',
     preco: '$95.00',
-    link: 'https://seu-link-curso1-aqui'
+    link: 'https://seu-link-curso1-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
+
 },
 {
     imagem: 'assets/carreira-e-desenvolvimento-pessoal.jpg',
     titulo: 'Título do Curso 2',
     descricao: 'Descrição breve do curso 2.',
     preco: '$85.00',
-    link: 'https://seu-link-curso2-aqui'
+    link: 'https://seu-link-curso2-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
 },
 {
   imagem: 'assets/curso-1.png',
   titulo: 'Título do Curso 3',
   descricao: 'Descrição breve do curso 3.',
   preco: '$20.00',
-  link: 'https://seu-link-curso3-aqui'
+  link: 'https://seu-link-curso3-aqui',
+  detalhesLink: 'https://seu-link-detalhes-aqui'
 },
 {
   imagem: 'assets/financas-e-negocios.jpeg',
   titulo: 'Título do Curso 4',
   descricao: 'Descrição breve do curso 4.',
   preco: '$100.00',
-  link: 'https://seu-link-curso4-aqui'
+  link: 'https://seu-link-curso4-aqui',
+  detalhesLink: 'https://seu-link-detalhes-aqui'
 },
 {
   imagem: 'assets/curso1.jpg',
   titulo: 'Título do Curso 5',
   descricao: 'Descrição breve do curso 5.',
   preco: '$80.00',
-  link: 'https://seu-link-curso5-aqui'
+  link: 'https://seu-link-curso5-aqui',
+  detalhesLink: 'https://seu-link-detalhes-aqui'
 },
 {
   imagem: 'assets/curso1.jpg',
   titulo: 'Título do Curso 5',
   descricao: 'Descrição breve do curso 5.',
   preco: '$80.00',
-  link: 'https://seu-link-curso5-aqui'
+  link: 'https://seu-link-curso5-aqui',
+  detalhesLink: 'https://seu-link-detalhes-aqui'
 },
 {
   imagem: 'assets/curso1.jpg',
   titulo: 'Título do Curso 5',
   descricao: 'Descrição breve do curso 5.',
   preco: '$80.00',
-  link: 'https://seu-link-curso5-aqui'
+  link: 'https://seu-link-curso5-aqui',
+  detalhesLink: 'https://seu-link-detalhes-aqui'
 },
 {
   imagem: 'assets/curso1.jpg',
   titulo: 'Título do Curso 5',
   descricao: 'Descrição breve do curso 5.',
   preco: '$80.00',
-  link: 'https://seu-link-curso5-aqui'
-}
+  link: 'https://seu-link-curso5-aqui',
+  detalhesLink: 'https://seu-link-detalhes-aqui'
+},
 
 ];
 
@@ -354,9 +404,14 @@ function adicionarCardsNovosCursos() {
               </div>
               <div><p class="text-blue-gray-900 font-medium">${curso.descricao}</p></div>
               <div class="card-actions mt-2 w-full flex justify-center">
-                  <a href="${curso.link}" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300">
-                      Compre Aqui
-                  </a>
+              <div class="card-actions mt-2 w-full flex justify-center">
+              <div class="card-actions mt-2 w-full flex flex-col items-center"> <!-- Flex container ajustado para empilhar itens verticalmente -->
+              <a href="${curso.link}" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300">
+                  Compre Aqui
+              </a>
+              <a href="${curso.detalhesLink}" target="_blank" class="text-black hover:text-red-500 mt-2 font-semibold transition duration-300"> <!-- Link de Detalhes adicionado -->
+                  Detalhes (+)
+              </a>
               </div>
           </div>
       `;
@@ -401,7 +456,6 @@ function adicionarCardsNovosCursos() {
 // Chama a função para adicionar os cards de novos cursos quando o documento HTML estiver completamente carregado
 document.addEventListener('DOMContentLoaded', adicionarCardsNovosCursos);
 
-
 // Dados simulados de exemplo (substitua com seus dados reais)
 const exemplos = [
   {
@@ -409,57 +463,41 @@ const exemplos = [
     titulo: 'Título do Curso 1',
     descricao: 'Descrição breve do curso 1.',
     preco: '$95.00',
-    link: 'https://seu-link-curso1-aqui'
-},
-{
+    link: 'https://seu-link-curso1-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
+  },
+  {
     imagem: 'assets/carreira-e-desenvolvimento-pessoal.jpg',
     titulo: 'Título do Curso 2',
     descricao: 'Descrição breve do curso 2.',
     preco: '$85.00',
-    link: 'https://seu-link-curso2-aqui'
-},
-{
-  imagem: 'assets/curso-1.png',
-  titulo: 'Título do Curso 3',
-  descricao: 'Descrição breve do curso 3.',
-  preco: '$20.00',
-  link: 'https://seu-link-curso3-aqui'
-},
-{
-  imagem: 'assets/financas-e-negocios.jpeg',
-  titulo: 'Título do Curso 4',
-  descricao: 'Descrição breve do curso 4.',
-  preco: '$100.00',
-  link: 'https://seu-link-curso4-aqui'
-},
-{
-  imagem: 'assets/curso1.jpg',
-  titulo: 'Título do Curso 5',
-  descricao: 'Descrição breve do curso 5.',
-  preco: '$80.00',
-  link: 'https://seu-link-curso5-aqui'
-},
-{
-  imagem: 'assets/curso1.jpg',
-  titulo: 'Título do Curso 5',
-  descricao: 'Descrição breve do curso 5.',
-  preco: '$80.00',
-  link: 'https://seu-link-curso5-aqui'
-},
-{
-  imagem: 'assets/curso1.jpg',
-  titulo: 'Título do Curso 5',
-  descricao: 'Descrição breve do curso 5.',
-  preco: '$80.00',
-  link: 'https://seu-link-curso5-aqui'
-},
-{
-  imagem: 'assets/curso1.jpg',
-  titulo: 'Título do Curso 5',
-  descricao: 'Descrição breve do curso 5.',
-  preco: '$80.00',
-  link: 'https://seu-link-curso5-aqui'
-}
+    link: 'https://seu-link-curso2-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
+  },
+  {
+    imagem: 'assets/curso-1.png',
+    titulo: 'Título do Curso 3',
+    descricao: 'Descrição breve do curso 3.',
+    preco: '$20.00',
+    link: 'https://seu-link-curso3-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
+  },
+  {
+    imagem: 'assets/financas-e-negocios.jpeg',
+    titulo: 'Título do Curso 4',
+    descricao: 'Descrição breve do curso 4.',
+    preco: '$100.00',
+    link: 'https://seu-link-curso4-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
+  },
+  {
+    imagem: 'assets/curso1.jpg',
+    titulo: 'Título do Curso 5',
+    descricao: 'Descrição breve do curso 5.',
+    preco: '$80.00',
+    link: 'https://seu-link-curso5-aqui',
+    detalhesLink: 'https://seu-link-detalhes-aqui'
+  }
   // Adicione mais objetos conforme necessário
 ];
 
@@ -467,27 +505,36 @@ const exemplos = [
 function adicionarCardsExemplos() {
   const container = document.getElementById('scrollContainer5');
   exemplos.forEach(exemplo => {
-      // Criando elementos HTML
-      const card = document.createElement('div');
-      card.classList.add('card', 'bg-base-100', 'shadow-xl', 'mx-2');
-      card.innerHTML = `
-          <figure class="px-6 pt-6">
-              <img src="${exemplo.imagem}" alt="${exemplo.titulo}" class="rounded-xl h-40 w-full object-cover">
-          </figure>
-          <div class="card-body items-center text-center p-3">
-              <div class="flex justify-between w-full">
-                  <h2 class="card-title text-lg font-bold">${exemplo.titulo}</h2>
-                  <p class="text-blue-gray-900 font-medium">${exemplo.preco}</p>
-              </div>
-              <div><p class="text-blue-gray-900 font-medium">${exemplo.descricao}</p></div>
-              <div class="card-actions mt-2 w-full flex justify-center">
-                  <a href="${exemplo.link}" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300">
-                      Compre Aqui
-                  </a>
-              </div>
+    // Criando elementos HTML
+    const card = document.createElement('div');
+    card.classList.add('card', 'bg-base-100', 'shadow-xl', 'mx-2');
+    card.innerHTML = `
+      <figure class="px-6 pt-6">
+        <img src="${exemplo.imagem}" alt="${exemplo.titulo}" class="rounded-xl h-40 w-full object-cover">
+      </figure>
+      <div class="card-body items-center text-center p-3">
+        <div class="flex justify-between w-full">
+          <h2 class="card-title text-lg font-bold">${exemplo.titulo}</h2>
+          <p class="text-blue-gray-900 font-medium">${exemplo.preco}</p>
+        </div>
+        <div>
+          <p class="text-blue-gray-900 font-medium">${exemplo.descricao}</p>
+        </div>
+        <div class="card-actions mt-2 w-full flex flex-col items-center">
+          <div class="w-full flex justify-center">
+            <a href="${exemplo.link}" target="_blank" class="bg-red-500 text-white hover:bg-red-600 py-2 px-4 rounded-lg font-semibold transition duration-300">
+              Compre Aqui
+            </a>
           </div>
-      `;
-      container.appendChild(card);
+          <div class="w-full flex justify-center mt-2">
+            <a href="${exemplo.detalhesLink}" target="_blank" class="text-black hover:text-red-500 mt-2 font-semibold transition duration-300">
+              Detalhes (+)
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
   });
 
   // Após adicionar os cards, definir os listeners de scroll
@@ -498,27 +545,27 @@ function adicionarCardsExemplos() {
   let scrollPosition = 0;
 
   function scrollLeft() {
-      if (scrollPosition > 0) {
-          scrollPosition -= 1;
-      } else {
-          scrollPosition = scrollItems.length - 1;
-      }
-      scrollContainer.scrollTo({
-          left: scrollItems[scrollPosition].offsetLeft,
-          behavior: 'smooth'
-      });
+    if (scrollPosition > 0) {
+      scrollPosition -= 1;
+    } else {
+      scrollPosition = scrollItems.length - 1;
+    }
+    scrollContainer.scrollTo({
+      left: scrollItems[scrollPosition].offsetLeft,
+      behavior: 'smooth'
+    });
   }
 
   function scrollRight() {
-      if (scrollPosition < scrollItems.length - 1) {
-          scrollPosition += 1;
-      } else {
-          scrollPosition = 0;
-      }
-      scrollContainer.scrollTo({
-          left: scrollItems[scrollPosition].offsetLeft,
-          behavior: 'smooth'
-      });
+    if (scrollPosition < scrollItems.length - 1) {
+      scrollPosition += 1;
+    } else {
+      scrollPosition = 0;
+    }
+    scrollContainer.scrollTo({
+      left: scrollItems[scrollPosition].offsetLeft,
+      behavior: 'smooth'
+    });
   }
 
   leftCarouselButton.addEventListener('click', scrollLeft);

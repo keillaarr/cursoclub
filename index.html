@@ -17,54 +17,44 @@
 
 <body class="bg-white">
       <!-- Navegação -->
-    <nav class="bg-white w-full h-20 md:h-24 z-100 nav-container"> <!-- Ajuste a altura conforme necessário -->
-        <div class="container mx-auto flex justify-between items-center h-full"> <!-- Use h-full para garantir que o conteúdo ocupe toda a altura da barra -->
-            <div class="flex items-center space-x-10">
-                <div class="w-32 h-20 flex items-center justify-center overflow-hidden hover:scale-100 duration-200"> <!-- Ajuste o tamanho da logo conforme necessário -->
-                    <img src="assets/logo.jpeg" alt="Logo" class="w-full h-full object-cover transition-transform duration-200 hover:scale-110">
-                </div>
-            </div>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#" class="text-black px-3 md:px-4 font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Todos os Cursos</a>
-                <a href="#" class="text-black px-3 md:px-4 font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Quem Somos</a>
-                <a href="#" class="text-black px-3 md:px-4 font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Fale Conosco</a>
-            </div>
-            <!-- Exibição vertical para telas menores -->
-            <div class="flex md:hidden flex-col items-center justify-center h-full">
-                <a href="#" class="text-black font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Todos os Cursos</a>
-                <a href="#" class="text-black font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Quem Somos</a>
-                <a href="#" class="text-black font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Fale Conosco</a>
+<nav class="bg-white w-full h-20 md:h-24 z-100 nav-container"> <!-- Ajuste a altura conforme necessário -->
+    <div class="container w-full mx-auto flex justify-between items-center h-full"> <!-- Use h-full para garantir que o conteúdo ocupe toda a altura da barra -->
+        <div class="flex items-center space-x-10">
+            <div class="w-32 h-20 flex items-center justify-center overflow-hidden hover:scale-100 duration-200"> <!-- Ajuste o tamanho da logo conforme necessário -->
+                <img src="assets/logo.jpeg" alt="Logo" class="w-full h-full object-cover transition-transform duration-200 hover:scale-110">
             </div>
         </div>
-    </nav>
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="#" class="text-black px-3 md:px-4 font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Todos os Cursos</a>
+            <a href="#" class="text-black px-3 md:px-4 font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Quem Somos</a>
+            <a href="#" class="text-black px-3 md:px-4 font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Fale Conosco</a>
+        </div>
+        <!-- Exibição vertical para telas menores -->
+        <div class="flex md:hidden flex-col items-center justify-center h-full">
+            <a href="#" class="text-black font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Todos os Cursos</a>
+            <a href="#" class="text-black font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Quem Somos</a>
+            <a href="#" class="text-black font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Fale Conosco</a>
+        </div>
+    </div>
+</nav>
 
-        <!-- Categorias -->
-        <div class="container mx-auto py-2 bg-red-500 border-b-2 border-gray-100">
-            <div >
-                <div class="flex flex-wrap justify-center space-x-2">
-                    <a href="#"
-                    class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Marketing Digital</a>
-                    <a href="#"
-                    class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1"> Ensino e Estudo Acadêmico</a>
-                    <a href="#"
-                    class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1"> Empreendedorismo</a>
-                    <a href="#"
-                    class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1"> Maquiagem</a>
-                    <a href="#"
-                    class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1"> Investimento</a>
-                    <a href="#"
-                    class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1"> Saúde e Esportes</a>
-                    <a href="#"
-                    class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1"> Culinária e Gastronomia</a>
-                    <a href="#"
-                    class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1"> Idioma</a>
-                    <a href="#"
-                    class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1"> Concursos</a>
-                    <a href="#"
-                    class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1"> Estética</a>
-                </div>
-            </div>
-        </div>
+<!-- Categorias -->
+<div class="w-full py-2 bg-red-500 border-b-2 border-gray-100">
+    <div class="flex flex-wrap justify-center space-x-2">
+        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Marketing Digital</a>
+        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Ensino e Estudo Acadêmico</a>
+        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Empreendedorismo</a>
+        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Maquiagem</a>
+        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Investimento</a>
+        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Saúde e Esportes</a>
+        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Culinária e Gastronomia</a>
+        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Idioma</a>
+        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Concursos</a>
+        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Estética</a>
+    </div>
+</div>
+
+        
 
        
     <!-- Banners -->
