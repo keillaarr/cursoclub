@@ -71,3 +71,22 @@
   color: rgb(241, 190, 180);
   /* Fix the hover color to be the same as the default color */
 }
+
+/* Estilos personalizados */
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 10px 20px;
+    /* Ajuste o padding conforme necessário */
+  }
+
+  .nav-container .hidden.md\:flex {
+    flex-wrap: wrap;
+  }
+
+  .nav-container .hidden.md\:flex a {
+    display: block;
+    margin-bottom: 10px;
+    /* Espaçamento entre os links */
+  }
+}
