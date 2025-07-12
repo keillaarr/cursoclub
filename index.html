@@ -1,197 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="logo.jpeg">
-    <title>Curso.Club</title>
-      <!--META TAG OG-->
-      <meta property="og:type" content="website">
-      <meta property="og:title" content="Curso.Club">
-      <meta property="og:image" content="assets/page.png">
-      <link rel="stylesheet" href="./styles/output.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Encontre os cursos mais vendidos e com desconto na Curso.Club. Aprenda marketing digital, concursos, idiomas e mais!" />
+  <meta name="keywords" content="cursos online, desconto, cursos mais vendidos, marketing digital, idioma, concursos" />
+  <meta name="author" content="Keilla Arruda" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Curso.Club" />
+  <meta property="og:image" content="assets/banner1.jpg" />
+
+  <title>Curso.Club</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Estilo adicional opcional -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpeg" />
 </head>
 
-<body class="bg-white">
-      <!-- Navegação -->
-<nav class="bg-white w-full h-20 md:h-24 z-100 nav-container"> <!-- Ajuste a altura conforme necessário -->
-    <div class="container w-full mx-auto flex justify-between items-center h-full"> <!-- Use h-full para garantir que o conteúdo ocupe toda a altura da barra -->
-        <div class="flex items-center space-x-10">
-            <div class="w-32 h-20 flex items-center justify-center overflow-hidden hover:scale-100 duration-200"> <!-- Ajuste o tamanho da logo conforme necessário -->
-                <img src="assets/logo.jpeg" alt="Logo" class="w-full h-full object-cover transition-transform duration-200 hover:scale-110">
-            </div>
-        </div>
-        <div class="hidden md:flex items-center space-x-8">
-            <a href="#" class="text-black px-3 md:px-4 font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Todos os Cursos</a>
-            <a href="#" class="text-black px-3 md:px-4 font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Quem Somos</a>
-            <a href="#" class="text-black px-3 md:px-4 font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Fale Conosco</a>
-        </div>
-        <!-- Exibição vertical para telas menores -->
-        <div class="flex md:hidden flex-col items-center justify-center h-full">
-            <a href="#" class="text-black font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Todos os Cursos</a>
-            <a href="#" class="text-black font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Quem Somos</a>
-            <a href="#" class="text-black font-bold text-sm md:text-base transition-transform duration-350 hover:scale-110 hover:text-red-500">Fale Conosco</a>
-        </div>
+<body class="bg-white text-gray-900">
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="container mx-auto flex items-center justify-between h-20 px-4 md:px-8">
+      <!-- Logo -->
+      <a href="#" class="flex items-center space-x-2">
+        <img src="assets/logo.jpeg" alt="Logo Curso.Club" class="h-12 w-12 object-cover rounded-full" loading="lazy" />
+        <span class="font-bold text-lg md:text-xl">Curso.Club</span>
+      </a>
+
+      <!-- Links de navegação -->
+      <ul class="hidden md:flex items-center space-x-6 font-semibold">
+        <li><a href="#" class="hover:text-red-500 transition">Todos os Cursos</a></li>
+        <li><a href="#" class="hover:text-red-500 transition">Quem Somos</a></li>
+        <li><a href="#" class="hover:text-red-500 transition">Fale Conosco</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Categorias -->
+  <section class="bg-red-500 py-2">
+    <div class="container mx-auto flex flex-wrap justify-center items-center gap-2 px-4 text-white text-sm font-semibold">
+      <a href="#" class="hover:underline">Marketing Digital</a>
+      <a href="#" class="hover:underline">Ensino</a>
+      <a href="#" class="hover:underline">Empreendedorismo</a>
+      <a href="#" class="hover:underline">Maquiagem</a>
+      <a href="#" class="hover:underline">Investimento</a>
+      <a href="#" class="hover:underline">Saúde</a>
+      <a href="#" class="hover:underline">Culinária</a>
+      <a href="#" class="hover:underline">Idioma</a>
+      <a href="#" class="hover:underline">Concursos</a>
+      <a href="#" class="hover:underline">Estética</a>
     </div>
-</nav>
+  </section>
 
-<!-- Categorias -->
-<div class="w-full py-2 bg-red-500 border-b-2 border-gray-100">
-    <div class="flex flex-wrap justify-center space-x-2">
-        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Marketing Digital</a>
-        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Ensino e Estudo Acadêmico</a>
-        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Empreendedorismo</a>
-        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Maquiagem</a>
-        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Investimento</a>
-        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Saúde e Esportes</a>
-        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Culinária e Gastronomia</a>
-        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Idioma</a>
-        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Concursos</a>
-        <a href="#" class="category-link text-white font-bold py-2 px-1 md:px-1 lg:px-1">Estética</a>
+  <!-- Banner Rotativo -->
+  <section class="relative h-64 md:h-96">
+    <div id="banner" class="h-full w-full bg-cover bg-center transition-all duration-700" style="background-image: url('assets/banner1.jpg');"></div>
+    <a id="bannerLink" href="#" target="_blank" class="absolute inset-0 z-10"></a>
+
+    <!-- Navegação do banner -->
+    <button id="prevBanner" aria-label="Banner anterior" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow z-20">
+      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button id="nextBanner" aria-label="Próximo banner" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow z-20">
+      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </section>
+
+  <!-- Seções de Cursos -->
+  <main class="container mx-auto px-4 py-10 space-y-16">
+    <!-- Cada seção pode ser reaproveitada -->
+    <section id="mais-vendidos" class="space-y-4">
+      <h2 class="text-3xl font-bold text-center">Mais Vendidos</h2>
+      <div class="relative">
+        <div class="scroll-container flex overflow-x-scroll space-x-4 no-scrollbar" id="scrollContainer1">
+          <!-- Cards inseridos por JS -->
+        </div>
+        <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-left" data-target="scrollContainer1">
+          ←
+        </button>
+        <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-right" data-target="scrollContainer1">
+          →
+        </button>
+      </div>
+    </section>
+
+    <section id="desconto" class="space-y-4">
+      <h2 class="text-3xl font-bold text-center">Descontos</h2>
+      <div class="relative">
+        <div class="scroll-container flex overflow-x-scroll space-x-4 no-scrollbar" id="scrollContainer2"></div>
+        <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-left" data-target="scrollContainer2">←</button>
+        <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-right" data-target="scrollContainer2">→</button>
+      </div>
+    </section>
+
+    <section id="novos-cursos" class="space-y-4">
+      <h2 class="text-3xl font-bold text-center">Novos Cursos</h2>
+      <div class="relative">
+        <div class="scroll-container flex overflow-x-scroll space-x-4 no-scrollbar" id="scrollContainer3"></div>
+        <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-left" data-target="scrollContainer3">←</button>
+        <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-right" data-target="scrollContainer3">→</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
+      <p>&copy; 2024 Curso.Club. Todos os direitos reservados.</p>
+      <div class="flex space-x-4 mt-2 md:mt-0">
+        <a href="#" class="hover:text-red-400">Facebook</a>
+        <a href="#" class="hover:text-red-400">Instagram</a>
+      </div>
     </div>
-</div>
+  </footer>
 
-        
-
-       
-    <!-- Banners -->
-    <div class="relative">
-        <div id="banner" class="banner bg-cover bg-center h-60 md:h-96 text-white transition-transform duration-500"
-            style="background-image: url('assets/banner-texto.jpg');"></div>
-        <a id="bannerLink" href="https://seu-link-1-aqui" target="_blank" rel="noopener noreferrer"
-            class="absolute inset-0"></a>
-        <div class="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 cursor-pointer banner-left-button">
-            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                    d="M12.707 14.707a1 1 0 010-1.414L9.414 10l3.293-3.293a1 1 00-1.414-1.414l-4 4a1 1 000 1.414l4 4a1 1 001.414 0z"
-                    clip-rule="evenodd"></path>
-            </svg>
-        </div>
-        <div class="absolute top-1/2 right-0 transform -translate-y-1/2 px-4 cursor-pointer banner-right-button">
-            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 00-1.414 1.414l4 4a1 1 011.414 0z"
-                    clip-rule="evenodd"></path>
-            </svg>
-        </div>
-    </div>
-
-                
-        <!-- Mais Vendidos -->
-        <div id="mais-vendidos" class="container mx-auto py-4 px-4 mt-16 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-70">
-            <h2 class="text-3xl font-bold mb-4 text-center">Mais Vendidos</h2>
-            <div class="relative flex items-center overflow-hidden">
-                <!-- Botão esquerdo -->
-                <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-left-button">
-                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                    </svg>
-                </button>
-
-                <!-- Conteúdo do carrossel -->
-                <div class="scroll-container flex space-x-2" id="scrollContainer" style="height: auto; min-height: 400px;">
-                    <!-- Aqui serão adicionados os cards dinamicamente via JavaScript -->
-                </div>
-
-                <!-- Botão direito -->
-                <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-right-button">
-                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-            <!-- Cursos com Desconto -->
-        <div id="desconto" class="container mx-auto py-4 px-4 mt-16 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-70" style="margin-top: -10px; padding-bottom: 50px;">
-            <h2 class="text-3xl font-bold mb-4 text-center">Descontos</h2>
-            <div class="relative flex items-center overflow-hidden">
-                <!-- Botão esquerdo -->
-                <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-left-button3">
-                    <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                    </svg>
-                </button>
-                <!-- Conteúdo do carrossel -->
-                <div class="scroll-container flex space-x-2 overflow-x-scroll no-scrollbar" id="scrollContainer3" style="height: auto; min-height: 400px;">
-                    <!-- Aqui serão adicionados os cards dinamicamente via JavaScript -->
-                </div>
-                <!-- Botão direito -->
-                <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-right-button3">
-                    <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-            <!-- Novos Cursos -->
-        <div id="novos-cursos" class="container mx-auto py-4 px-4 mt-16 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-70" style="margin-top: -10px; padding-bottom: 50px;">
-            <h2 class="text-3xl font-bold mb-4 text-center">Novos Cursos</h2>
-            <div class="relative flex items-center overflow-hidden">
-                <!-- Botão esquerdo -->
-                <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-left-button4">
-                    <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                    </svg>
-                </button>
-                <!-- Conteúdo do carrossel -->
-                <div class="scroll-container flex space-x-2 overflow-x-scroll no-scrollbar" id="scrollContainer4" style="height: auto; min-height: 400px;">
-                    <!-- Aqui serão adicionados os cards dinamicamente via JavaScript -->
-                </div>
-                <!-- Botão direito -->
-                <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-right-button4">
-                    <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-                <!-- Exemplo -->
-        <div id="exemplo" class="container mx-auto py-4 px-4 mt-16 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-70" style="margin-top: -10px; padding-bottom: 50px;">
-            <h2 class="text-3xl font-bold mb-4 text-center">Exemplo</h2>
-            <div class="relative flex items-center overflow-hidden">
-                <!-- Botão esquerdo -->
-                <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-left-button5">
-                    <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                    </svg>
-                </button>
-                <!-- Conteúdo do carrossel -->
-                <div class="scroll-container flex space-x-2 overflow-x-scroll no-scrollbar" id="scrollContainer5" style="height: auto; min-height: 400px;">
-                    <!-- Aqui serão adicionados os cards dinamicamente via JavaScript -->
-                </div>
-                <!-- Botão direito -->
-                <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 carousel-right-button5">
-                    <svg class="w-6 h-6 text-gray-700" fill="none" style="fill: transparent;" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-    <!-- Rodapé -->
-    <footer class="bg-gray-800 text-white py-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div>
-                <p class="text-center md:text-left">&copy; 2024 Curso.Club. Todos os direitos reservados.</p>
-            </div>
-            <div>
-                <a href="#"
-                    class="inline-block text-white px-3 font-bold transition-transform duration-350 hover:scale-110">Facebook</a>
-                <a href="#"
-                    class="inline-block text-white px-3 font-bold transition-transform duration-350 hover:scale-110">Instagram</a>
-
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
 </body>
-
 </html>
