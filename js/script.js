@@ -1,72 +1,3 @@
-// ===== Banner Rotativo =====
-const banners = [
-  { img: 'assets/banner1.jpg', link: 'https://link1.com' },
-  { img: 'assets/banner2.jpg', link: 'https://link2.com' },
-  { img: 'assets/banner3.jpg', link: 'https://link3.com' }
-];
-
-let bannerIndex = 0;
-const bannerEl = document.getElementById('banner');
-const bannerLinkEl = document.getElementById('bannerLink');
-
-function updateBanner() {
-  bannerEl.style.backgroundImage = `url('${banners[bannerIndex].img}')`;
-  bannerLinkEl.href = banners[bannerIndex].link;
-}
-
-function nextBanner() {
-  bannerIndex = (bannerIndex + 1) % banners.length;
-  updateBanner();
-}
-
-function prevBanner() {
-  bannerIndex = (bannerIndex - 1 + banners.length) % banners.length;
-  updateBanner();
-}
-
-document.getElementById('nextBanner').addEventListener('click', nextBanner);
-document.getElementById('prevBanner').addEventListener('click', prevBanner);
-setInterval(nextBanner, 5000); // troca automática a cada 5s
-updateBanner(); // inicia com o primeiro banner
-
-// ===== Carrosséis Horizontais =====
-const leftButtons = document.querySelectorAll('.carousel-left');
-const rightButtons = document.querySelectorAll('.carousel-right');
-
-leftButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const targetId = btn.dataset.target;
-    const container = document.getElementById(targetId);
-    container.scrollBy({ left: -300, behavior: 'smooth' });
-  });
-});
-
-rightButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const targetId = btn.dataset.target;
-    const container = document.getElementById(targetId);
-    container.scrollBy({ left: 300, behavior: 'smooth' });
-  });
-});
-
-// ===== Geração dinâmica de cards de cursos =====
-function createCourseCard({ title, image, price, link }) {
-  const card = document.createElement('a');
-  card.href = link;
-  card.target = '_blank';
-  card.className = 'min-w-[250px] max-w-xs bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden';
-
-  card.innerHTML = `
-    <img src="${image}" alt="${title}" class="w-full h-40 object-cover" loading="lazy" />
-    <div class="p-4">
-      <h3 class="text-lg font-bold mb-2">${title}</h3>
-      <p class="text-red-500 font-semibold">${price}</p>
-    </div>
-  `;
-
-  return card;
-}
-
 // ===== Dados simulados dos cursos =====
 const cursosMaisVendidos = [
   { title: 'Curso de Marketing Digital', image: 'assets/curso-marketing-digital.webp', price: 'R$ 49,90', link: '#' },
@@ -110,70 +41,115 @@ const novosCursos = [
 ];
 
 
-// ===== Renderiza cards por seção =====
+// Cria o card do curso com animação fade-in
+function createCourseCard(curso) {
+  const card = document.createElement('div');
+  card.className = 'course-card bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg hover:border-red-400 transition relative fade-in';
+  card.style.minWidth = '240px';
+
+  card.innerHTML = `
+    <a href="${curso.link}" target="_blank" rel="noopener noreferrer" class="block overflow-hidden rounded-t-lg">
+      <img src="${curso.image}" alt="${curso.title}" loading="lazy" class="w-full h-40 object-cover transition-transform duration-300 ease-in-out hover:scale-105" />
+    </a>
+    <div class="p-4">
+      <h3 class="text-lg font-semibold text-gray-900 mb-2">${curso.title}</h3>
+      <p class="text-red-500 font-bold">${curso.price}</p>
+    </div>
+  `;
+
+  return card;
+}
+
+// Renderiza os cards no container especificado
 function renderCards(containerId, cursos) {
   const container = document.getElementById(containerId);
+  container.innerHTML = ''; // limpa antes de renderizar
   cursos.forEach(curso => {
     const card = createCourseCard(curso);
     container.appendChild(card);
   });
 }
 
-renderCards('scrollContainer1', cursosMaisVendidos);
-renderCards('scrollContainer2', cursosComDesconto);
-renderCards('scrollContainer3', novosCursos);
+// Controla o scroll do carrossel
+function setupCarouselButtons() {
+  const leftButtons = document.querySelectorAll('.carousel-left');
+  const rightButtons = document.querySelectorAll('.carousel-right');
 
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('form');
-  const inputs = form.querySelectorAll('input, textarea');
-
-  // Função para criar/mostrar mensagem de erro
-  function showError(input, message) {
-    clearError(input);
-    const error = document.createElement('p');
-    error.className = 'text-red-600 text-sm mt-1';
-    error.innerText = message;
-    input.parentNode.appendChild(error);
-  }
-
-  // Remove mensagem de erro
-  function clearError(input) {
-    const next = input.parentNode.querySelector('p.text-red-600');
-    if (next) next.remove();
-  }
-
-  // Validação simples
-  function validate() {
-    let valid = true;
-    inputs.forEach(input => {
-      clearError(input);
-      if (!input.value.trim()) {
-        showError(input, 'Este campo é obrigatório.');
-        valid = false;
-      } else {
-        // Se for email, valida formato básico
-        if (input.type === 'email') {
-          const re = /\S+@\S+\.\S+/;
-          if (!re.test(input.value.trim())) {
-            showError(input, 'Por favor, insira um e-mail válido.');
-            valid = false;
-          }
-        }
-      }
+  leftButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const container = document.getElementById(targetId);
+      container.scrollBy({ left: -300, behavior: 'smooth' });
     });
-    return valid;
+  });
+
+  rightButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const container = document.getElementById(targetId);
+      container.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+  });
+}
+
+// Banner rotativo
+const banners = [
+  { image: 'assets/banner1.jpg', link: '#' },
+  { image: 'assets/banner2.jpg', link: '#' },
+  { image: 'assets/banner3.jpg', link: '#' },
+];
+
+let bannerIndex = 0;
+const bannerEl = document.getElementById('banner');
+const bannerLinkEl = document.getElementById('bannerLink');
+const prevBannerBtn = document.getElementById('prevBanner');
+const nextBannerBtn = document.getElementById('nextBanner');
+
+function showBanner(index) {
+  bannerEl.style.backgroundImage = `url('${banners[index].image}')`;
+  bannerLinkEl.href = banners[index].link;
+}
+
+prevBannerBtn.addEventListener('click', () => {
+  bannerIndex = (bannerIndex - 1 + banners.length) % banners.length;
+  showBanner(bannerIndex);
+});
+
+nextBannerBtn.addEventListener('click', () => {
+  bannerIndex = (bannerIndex + 1) % banners.length;
+  showBanner(bannerIndex);
+});
+
+// Autoplay banner a cada 7 segundos
+setInterval(() => {
+  bannerIndex = (bannerIndex + 1) % banners.length;
+  showBanner(bannerIndex);
+}, 7000);
+
+// Busca por nome de curso
+const buscaInput = document.getElementById('busca');
+
+function filterCourses() {
+  const query = buscaInput.value.toLowerCase();
+
+  function filterList(cursos) {
+    return cursos.filter(curso => curso.title.toLowerCase().includes(query));
   }
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    if (validate()) {
-      // Aqui você faria o envio do form via fetch ou outra API
-      // Exemplo simulado:
-      alert('Mensagem enviada com sucesso! Obrigado pelo contato.');
-      form.reset();
-    }
-  });
-});
+  renderCards('scrollContainer1', filterList(cursosMaisVendidos));
+  renderCards('scrollContainer2', filterList(cursosComDesconto));
+  renderCards('scrollContainer3', filterList(novosCursos));
+}
+
+buscaInput.addEventListener('input', filterCourses);
+
+// Inicializa tudo
+function init() {
+  renderCards('scrollContainer1', cursosMaisVendidos);
+  renderCards('scrollContainer2', cursosComDesconto);
+  renderCards('scrollContainer3', novosCursos);
+  setupCarouselButtons();
+  showBanner(bannerIndex);
+}
+
+init();
