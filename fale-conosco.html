@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fale Conosco - Curso.Club</title>
+
+  <meta name="description" content="Entre em contato com a equipe Curso.Club. Estamos aqui para ajudar você!" />
+  <meta name="author" content="Keilla Arruda" />
+  <meta property="og:title" content="Fale Conosco - Curso.Club" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/banner1.jpg" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpeg" />
+</head>
+
+<body class="bg-white text-gray-900">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="container mx-auto flex items-center justify-between h-24 px-4 md:px-8">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="assets/logo.jpeg" alt="Logo Curso.Club" class="h-20 w-20 object-contain rounded-full" loading="lazy" />
+        <span class="font-bold text-2xl text-gray-800">Curso.Club</span>
+      </a>
+      <ul class="hidden md:flex items-center space-x-6 font-medium text-base">
+        <li><a href="index.html" class="hover:text-red-500 transition">Home</a></li>
+        <li><a href="quem-somos.html" class="hover:text-red-500 transition">Quem Somos</a></li>
+        <li><a href="#" class="text-red-500 font-semibold cursor-default">Fale Conosco</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container mx-auto px-4 py-16 max-w-3xl">
+    <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">Fale Conosco</h1>
+    <p class="mb-8 text-center text-gray-700 leading-relaxed">
+      Tem alguma dúvida, sugestão ou quer saber mais sobre nossos cursos? Envie sua mensagem abaixo, teremos prazer em responder!
+    </p>
+
+    <form action="#" method="POST" class="space-y-6 bg-gray-50 p-8 rounded-lg shadow-md">
+      <div>
+        <label for="nome" class="block text-gray-700 font-semibold mb-2">Nome completo</label>
+        <input type="text" id="nome" name="nome" required
+          class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500" />
+      </div>
+
+      <div>
+        <label for="email" class="block text-gray-700 font-semibold mb-2">E-mail</label>
+        <input type="email" id="email" name="email" required
+          class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500" />
+      </div>
+
+      <div>
+        <label for="assunto" class="block text-gray-700 font-semibold mb-2">Assunto</label>
+        <input type="text" id="assunto" name="assunto" required
+          class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500" />
+      </div>
+
+      <div>
+        <label for="mensagem" class="block text-gray-700 font-semibold mb-2">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required
+          class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500 resize-none"></textarea>
+      </div>
+
+      <button type="submit"
+        class="w-full bg-red-500 text-white font-bold py-3 rounded hover:bg-red-600 transition">Enviar Mensagem</button>
+    </form>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
+      <p>&copy; 2024 Curso.Club. Todos os direitos reservados.</p>
+      <div class="flex space-x-4 mt-2 md:mt-0">
+        <a href="#" class="hover:text-red-400 transition">Facebook</a>
+        <a href="#" class="hover:text-red-400 transition">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

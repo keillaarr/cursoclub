@@ -122,3 +122,58 @@ function renderCards(containerId, cursos) {
 renderCards('scrollContainer1', cursosMaisVendidos);
 renderCards('scrollContainer2', cursosComDesconto);
 renderCards('scrollContainer3', novosCursos);
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('form');
+  const inputs = form.querySelectorAll('input, textarea');
+
+  // Função para criar/mostrar mensagem de erro
+  function showError(input, message) {
+    clearError(input);
+    const error = document.createElement('p');
+    error.className = 'text-red-600 text-sm mt-1';
+    error.innerText = message;
+    input.parentNode.appendChild(error);
+  }
+
+  // Remove mensagem de erro
+  function clearError(input) {
+    const next = input.parentNode.querySelector('p.text-red-600');
+    if (next) next.remove();
+  }
+
+  // Validação simples
+  function validate() {
+    let valid = true;
+    inputs.forEach(input => {
+      clearError(input);
+      if (!input.value.trim()) {
+        showError(input, 'Este campo é obrigatório.');
+        valid = false;
+      } else {
+        // Se for email, valida formato básico
+        if (input.type === 'email') {
+          const re = /\S+@\S+\.\S+/;
+          if (!re.test(input.value.trim())) {
+            showError(input, 'Por favor, insira um e-mail válido.');
+            valid = false;
+          }
+        }
+      }
+    });
+    return valid;
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (validate()) {
+      // Aqui você faria o envio do form via fetch ou outra API
+      // Exemplo simulado:
+      alert('Mensagem enviada com sucesso! Obrigado pelo contato.');
+      form.reset();
+    }
+  });
+});

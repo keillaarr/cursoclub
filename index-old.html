@@ -3,41 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="Encontre os cursos mais vendidos e com desconto na Curso.Club. Aprenda marketing digital, concursos, idiomas e mais!" />
   <meta name="keywords" content="cursos online, desconto, cursos mais vendidos, marketing digital, idioma, concursos" />
   <meta name="author" content="Keilla Arruda" />
-  <meta property="og:title" content="Curso.Club" />
   <meta property="og:type" content="website" />
+  <meta property="og:title" content="Curso.Club" />
   <meta property="og:image" content="assets/banner1.jpg" />
+
   <title>Curso.Club</title>
 
-  <!-- Tailwind -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Estilo adicional opcional -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/logo.jpeg" />
 </head>
 
 <body class="bg-white text-gray-900">
-
-  <!-- Navbar -->
+ <!-- Navbar -->
   <header class="bg-white shadow sticky top-0 z-50">
     <nav class="container mx-auto flex items-center justify-between h-24 px-4 md:px-8">
       <!-- Logo -->
       <a href="#" class="flex items-center space-x-3">
-        <img src="assets/logo.jpeg" alt="Logo Curso.Club" class="h-20 w-20 object-contain rounded-full" loading="lazy" />
+      <img src="assets/logo.jpeg" alt="Logo Curso.Club" class="h-20 w-20 object-contain" loading="lazy" />
+      <!--  <span class="font-bold text-lg md:text-xl">Curso.Club</span>  -->
       </a>
-      <!-- Links -->
-      <ul class="hidden md:flex items-center space-x-6 font-medium text-base">
+
+      <!-- Links de navegação -->
+      <ul class="hidden md:flex items-center space-x-6 font-semibold">
         <li><a href="#" class="hover:text-red-500 transition">Todos os Cursos</a></li>
-        <li><a href="quem-somos.html" class="hover:text-red-500 transition">Quem Somos</a></li>
-        <li><a href="fale-conosco.html" class="hover:text-red-500 transition">Fale Conosco</a></li>
+        <li><a href="#" class="hover:text-red-500 transition">Quem Somos</a></li>
+        <li><a href="#" class="hover:text-red-500 transition">Fale Conosco</a></li>
       </ul>
-    </nav>
+    </nav> 
   </header>
 
   <!-- Categorias -->
-  <section class="bg-red-500 py-3">
-    <div class="container mx-auto flex flex-wrap justify-center items-center gap-3 px-4 text-white text-sm font-semibold">
+  <section class="bg-red-500 py-2">
+    <div class="container mx-auto flex flex-wrap justify-center items-center gap-2 px-4 text-white text-sm font-semibold">
       <a href="#" class="hover:underline">Marketing Digital</a>
       <a href="#" class="hover:underline">Ensino</a>
       <a href="#" class="hover:underline">Empreendedorismo</a>
@@ -52,48 +59,54 @@
   </section>
 
   <!-- Banner Rotativo -->
-  <section class="relative h-64 md:h-[400px] overflow-hidden">
+  <section class="relative h-64 md:h-96">
     <div id="banner" class="h-full w-full bg-cover bg-center transition-all duration-700" style="background-image: url('assets/banner1.jpg');"></div>
     <a id="bannerLink" href="#" target="_blank" class="absolute inset-0 z-10"></a>
 
-    <!-- Navegação -->
-    <button id="prevBanner" aria-label="Anterior" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow z-20">
+    <!-- Navegação do banner -->
+    <button id="prevBanner" aria-label="Banner anterior" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow z-20">
       <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
       </svg>
     </button>
-    <button id="nextBanner" aria-label="Próximo" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow z-20">
+    <button id="nextBanner" aria-label="Próximo banner" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow z-20">
       <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
       </svg>
     </button>
   </section>
 
-  <!-- Seções -->
+  <!-- Seções de Cursos -->
   <main class="container mx-auto px-4 py-10 space-y-16">
-    <!-- Reutilizável -->
-    <section id="mais-vendidos" class="space-y-6">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800">Mais Vendidos</h2>
+    <!-- Cada seção pode ser reaproveitada -->
+    <section id="mais-vendidos" class="space-y-4">
+      <h2 class="text-3xl font-bold text-center">Mais Vendidos</h2>
       <div class="relative">
-        <div class="scroll-container flex overflow-x-scroll space-x-4 no-scrollbar pb-4" id="scrollContainer1"></div>
-        <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-left" data-target="scrollContainer1">←</button>
-        <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-right" data-target="scrollContainer1">→</button>
+        <div class="scroll-container flex overflow-x-scroll space-x-4 no-scrollbar" id="scrollContainer1">
+          <!-- Cards inseridos por JS -->
+        </div>
+        <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-left" data-target="scrollContainer1">
+          ←
+        </button>
+        <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-right" data-target="scrollContainer1">
+          →
+        </button>
       </div>
     </section>
 
-    <section id="desconto" class="space-y-6">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800">Descontos</h2>
+    <section id="desconto" class="space-y-4">
+      <h2 class="text-3xl font-bold text-center">Descontos</h2>
       <div class="relative">
-        <div class="scroll-container flex overflow-x-scroll space-x-4 no-scrollbar pb-4" id="scrollContainer2"></div>
+        <div class="scroll-container flex overflow-x-scroll space-x-4 no-scrollbar" id="scrollContainer2"></div>
         <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-left" data-target="scrollContainer2">←</button>
         <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-right" data-target="scrollContainer2">→</button>
       </div>
     </section>
 
-    <section id="novos-cursos" class="space-y-6">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800">Novos Cursos</h2>
+    <section id="novos-cursos" class="space-y-4">
+      <h2 class="text-3xl font-bold text-center">Novos Cursos</h2>
       <div class="relative">
-        <div class="scroll-container flex overflow-x-scroll space-x-4 no-scrollbar pb-4" id="scrollContainer3"></div>
+        <div class="scroll-container flex overflow-x-scroll space-x-4 no-scrollbar" id="scrollContainer3"></div>
         <button class="absolute left-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-left" data-target="scrollContainer3">←</button>
         <button class="absolute right-0 top-1/3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow carousel-right" data-target="scrollContainer3">→</button>
       </div>
@@ -101,12 +114,12 @@
   </main>
 
   <!-- Rodapé -->
-  <footer class="bg-gray-900 text-white py-6">
+  <footer class="bg-gray-800 text-white py-6">
     <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
       <p>&copy; 2024 Curso.Club. Todos os direitos reservados.</p>
       <div class="flex space-x-4 mt-2 md:mt-0">
-        <a href="#" class="hover:text-red-400 transition">Facebook</a>
-        <a href="#" class="hover:text-red-400 transition">Instagram</a>
+        <a href="#" class="hover:text-red-400">Facebook</a>
+        <a href="#" class="hover:text-red-400">Instagram</a>
       </div>
     </div>
   </footer>
